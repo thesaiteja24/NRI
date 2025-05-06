@@ -14,8 +14,6 @@ import { useStudentsData } from "../../contexts/StudentsListContext";
 import { useUniqueBatches } from "../../contexts/UniqueBatchesContext";
 
 const subjects = [
-  { value: "C", label: "C" },
-  { value: "DS-C", label: "DS-C" },
   { value: "Python", label: "Python" },
 ];
 

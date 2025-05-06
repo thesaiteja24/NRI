@@ -33,7 +33,7 @@ const BatchScheduler = () => {
   const location = decryptData(sessionStorage.getItem('location')); // Hardcode to NRIA
 
   const techStacks = ["NRIA"]; // Available tech stacks
-  const nriaSubjects = ["C", "Python", "DS-C"]; // Subjects for NRIA tech stack
+  const nriaSubjects = ["Python"]; // Subjects for NRIA tech stack
 
   const formatTimeTo24Hour = (time) => {
     if (!time) return "";

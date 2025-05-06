@@ -326,6 +326,11 @@ export const SidebarV = ({
                 path: "/studentsearch",
                 icon: FaSearch,
               },
+              {
+                label: "Feature's Settings",
+                path: "/feature-flags",
+                icon: FaGears,
+              },
             ],
           },
           {
