@@ -13,7 +13,7 @@ const KitsCollaboration = () => {
           <img
             src={NRIA}
             alt="NRI Logo"
-            className=" w-[250px]  md:w-[790px]   lg:w-[1550px]  object-contain"
+            className=" max-w-[1100px]   object-contain"
           />
         </div>
 

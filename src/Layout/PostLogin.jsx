@@ -32,11 +32,22 @@ const PostLogin = ({
             className="cursor-pointer h-12 sm:h-20  md:ml-10 w-24 md:w-36 " // slightly bigger
             onClick={() => navigate("/")}
           />
-          <img
-            src={NRIA}
-            alt="NRI Badge"
-            className="cursor-pointer -mt-3 h-12 sm:h-20   md:-ml-2 w-24 md:w-36" // slightly bigger
-          />
+         <div className="flex justify-center items-center">
+        <img
+          src={NRIA}
+          alt="NRI Badge"
+          className="
+            cursor-pointer ml-2
+            w-12        h-auto    /* mobile */
+            sm:w-14     sm:h-auto /* small screens */
+            md:w-16     md:h-auto /* medium screens */
+            lg:w-20     lg:h-auto /* large screens */
+            xl:w-16     xl:h-auto /* extra‑large */
+            object-contain
+          "
+        />
+      </div>
+
         </div>
       </div>
 
