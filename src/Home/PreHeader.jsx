@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import NRIA from "/NRIA.png";
 
 const PreHeader = () => {
   const navigate = useNavigate();
@@ -16,9 +17,9 @@ const PreHeader = () => {
           onClick={() => navigate("/")}
         />
         <img
-          src="https://res.cloudinary.com/db2bpf0xw/image/upload/v1745658094/logo_s2toqb.png"
-          alt="KITS Badge"
-          className="cursor-pointer  md:ml-10 w-24 md:w-32" // slightly bigger
+          src={NRIA}
+          alt="NRI Badge"
+          className="cursor-pointer w-[70px]" // slightly bigger
         />
 
       </div>
