@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaBars, FaChevronDown, FaPowerOff } from "react-icons/fa";
 import { decryptData } from "../../cryptoUtils";
+import NRIA from "/NRIA.png";
 
 const PostLogin = ({
   onToggleSidebar,
@@ -8,7 +9,6 @@ const PostLogin = ({
   onLogout,
   isMobileView,
 }) => {
-
   const userType = decryptData(sessionStorage.getItem("userType"));
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -26,19 +26,18 @@ const PostLogin = ({
           </button>
         )}
         <div className="flex items-center ">
-        <img
-          src="https://res.cloudinary.com/db2bpf0xw/image/upload/v1734849439/codegnan-logo_qxnxrq.webp"
-          alt="Codegnan Logo"
-          className="cursor-pointer h-12 sm:h-20  md:ml-10 w-24 md:w-36 " // slightly bigger
-          onClick={() => navigate("/")}
-        />
-        <img
-          src="https://res.cloudinary.com/db2bpf0xw/image/upload/v1745658094/logo_s2toqb.png"
-          alt="KITS Badge"
-          className="cursor-pointer -mt-3 h-12 sm:h-20   md:-ml-2 w-24 md:w-36" // slightly bigger
-        />
-
-      </div>
+          <img
+            src="https://res.cloudinary.com/db2bpf0xw/image/upload/v1734849439/codegnan-logo_qxnxrq.webp"
+            alt="Codegnan Logo"
+            className="cursor-pointer h-12 sm:h-20  md:ml-10 w-24 md:w-36 " // slightly bigger
+            onClick={() => navigate("/")}
+          />
+          <img
+            src={NRIA}
+            alt="NRI Badge"
+            className="cursor-pointer -mt-3 h-12 sm:h-20   md:-ml-2 w-24 md:w-36" // slightly bigger
+          />
+        </div>
       </div>
 
       {/* Right: User Info */}
@@ -54,7 +53,9 @@ const PostLogin = ({
                   {userProfile.name}
                 </span>
                 <img
-                  src={userProfile.avatarUrl || "https://via.placeholder.com/40"}
+                  src={
+                    userProfile.avatarUrl || "https://via.placeholder.com/40"
+                  }
                   alt="User Avatar"
                   className="w-10 h-10 sm:w-11 sm:h-11 rounded-full object-cover border border-gray-300"
                 />
