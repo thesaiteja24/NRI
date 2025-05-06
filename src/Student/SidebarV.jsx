@@ -157,7 +157,7 @@ export const SidebarV = ({
             path: "/mock-interviews",
             icon: MockInterviewIcon,
           },
-          { label: "Leaderboard", path: "/leaderboard", icon: FaChartBar },
+          // { label: "Leaderboard", path: "/leaderboard", icon: FaChartBar },
           { label: "Logout", action: handleLogout, icon: FaSignOutAlt },
         ];
         if (codePlaygroundStatus) {
@@ -225,16 +225,16 @@ export const SidebarV = ({
               },
             ],
           },
-          {
-            label: "Code Playground",
-            items: [
-              {
-                label: "Leaderboard",
-                path: "/manageleaderboard",
-                icon: FaChartBar,
-              },
-            ],
-          },
+          // {
+          //   label: "Code Playground",
+          //   items: [
+          //     {
+          //       label: "Leaderboard",
+          //       path: "/manageleaderboard",
+          //       icon: FaChartBar,
+          //     },
+          //   ],
+          // },
           {
             label: "Feature's Settings",
             path: "/feature-flags",
@@ -316,11 +316,11 @@ export const SidebarV = ({
                 path: "/students-performance-manager",
                 icon: StudentPerformanceIcon,
               },
-              {
-                label: "Leaderboard",
-                path: "/manageleaderboard",
-                icon: FaChartBar,
-              },
+              // {
+              //   label: "Leaderboard",
+              //   path: "/manageleaderboard",
+              //   icon: FaChartBar,
+              // },
               {
                 label: "Student Search",
                 path: "/studentsearch",
@@ -369,11 +369,11 @@ export const SidebarV = ({
             path: "/studentdata",
             icon: MentorStudentDataIcon,
           },
-          {
-            label: "Leaderboard",
-            path: "/mentor-leaderboard",
-            icon: FaChartBar,
-          },
+          // {
+          //   label: "Leaderboard",
+          //   path: "/mentor-leaderboard",
+          //   icon: FaChartBar,
+          // },
 
           {
             label: "Students Performance",
@@ -399,11 +399,11 @@ export const SidebarV = ({
             path: "/studentdata",
             icon: StudentDataIcon,
           },
-          {
-            label: "Leaderboard",
-            path: "/manageleaderboard",
-            icon: FaChartBar,
-          },
+          // {
+          //   label: "Leaderboard",
+          //   path: "/manageleaderboard",
+          //   icon: FaChartBar,
+          // },
 
           {
             label: "Exam Statistics",

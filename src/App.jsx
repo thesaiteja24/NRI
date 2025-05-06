@@ -679,14 +679,14 @@ export default function App() {
                   />
                 </>
               )}
-              <Route
+              {/* <Route
                 path="/leaderboard"
                 element={
                   <ProtectedRoute allowedRoles={["student_login_details"]}>
                     <LeaderBoard />
                   </ProtectedRoute>
                 }
-              />
+              /> */}
               <Route
                 path="/compiler"
                 element={
@@ -758,7 +758,7 @@ export default function App() {
                   </ProtectedRoute>
                 }
               />
-              <Route
+              {/* <Route
                 path="/manageleaderboard"
                 element={
                   <ProtectedRoute
@@ -767,15 +767,15 @@ export default function App() {
                     <ManageLeaderBoard />
                   </ProtectedRoute>
                 }
-              />
-              <Route
+              /> */}
+              {/* <Route
                 path="/mentor-leaderboard"
                 element={
                   <ProtectedRoute allowedRoles={["Mentors"]}>
                     <MentorLeaderBoard />
                   </ProtectedRoute>
                 }
-              />
+              /> */}
               <Route
                 path="/mentorstudentslist"
                 element={
