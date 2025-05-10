@@ -13,6 +13,7 @@ import { toast } from "react-toastify"; // Added for error notifications
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FaBook } from "react-icons/fa";
+import MobileWarningCard from "./MobileWarningCard.jsx";
 
 const ExamDashboard = () => {
   const { setExamData, examData } = useContext(ExamContext); // Added examData
@@ -210,7 +211,8 @@ const ExamDashboard = () => {
   }
 
   return (
-    <div className="flex flex-col px-4 py-4 md:px-8 lg:px-12 font-[inter]">
+    <>
+     <div className="hidden lg:block flex-col px-4 py-4 md:px-8 lg:px-12 font-[inter]">
       {/* ==================== ACTIVE EXAMS ==================== */}
       {active.length > 0 && (
         <div className="mb-6">
@@ -560,6 +562,10 @@ const ExamDashboard = () => {
         />
       )}
     </div>
+    <div >
+      <MobileWarningCard/>
+    </div>
+    </>
   );
 };
 
