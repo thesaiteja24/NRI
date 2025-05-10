@@ -10,7 +10,7 @@ import { useStudent } from '../contexts/StudentProfileContext';
 import { decryptData } from '../../cryptoUtils.jsx';
 
 const departmentList = [
-  'CSE','AI/ML','CSM','CSD','IT','ECE','EEE','MECH'
+  'CSE','AIML','CSM','CSD','IT','ECE','EEE','MECH'
 ];
 
 const StudentProfileV = () => {
