@@ -64,7 +64,7 @@ export const QuestionBreakDown = ({ details }) => {
                   <span className="font-medium">Question:</span>
                   <span className="text-black font-semibold">{questionText}</span>
                   <span className="font-medium">Marks Awarded:</span>
-                  <span className="text-gray-500">{scoreAwarded}</span>
+                  <span className="text-gray-500">{Math.round(scoreAwarded)}</span>
                 </div>
                 <div className="flex gap-2">
                   <span className="font-medium">Type:</span>

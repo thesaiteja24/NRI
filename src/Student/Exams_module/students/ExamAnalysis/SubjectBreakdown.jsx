@@ -109,7 +109,7 @@ const SubjectBreakdown = ({ subjectBreakdown }) => {
                   {/* Column 5: Coding Score */}
                   <div className="px-4 flex flex-col justify-between  items-center">
                     <p className="text-[15px] font-medium text-black">Coding Score</p>
-                    <p className="text-[32px] font-bold text-black">{selectedData.coding.score}</p>
+                    <p className="text-[32px] font-bold text-black">{Math.round(selectedData.coding.score)}</p>
                   </div>
                   
                  
@@ -141,7 +141,7 @@ const SubjectBreakdown = ({ subjectBreakdown }) => {
 
               <div className="px-4 flex flex-col justify-between   items-center">
                 <p className="text-[15px] font-medium text-black">Total Score</p>
-                <p className="text-[32px] font-bold text-black">{selectedData.score}</p>
+                <p className="text-[32px] font-bold text-black">{Math.round(selectedData.score)}</p>
               </div>
 
               {/* Custom Divider Lines */}

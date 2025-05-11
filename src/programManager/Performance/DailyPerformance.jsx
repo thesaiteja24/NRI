@@ -15,22 +15,23 @@ const DailyPerformance = () => {
 
   if (!data || !data.reports) return null;
 
-  const getSubjectWiseAnalysis = (subjects) => {
-    if (!subjects || Object.keys(subjects).length === 0) return [];
-    return Object.entries(subjects).map(([subjectName, subjData]) => {
-      const maxCode = subjData.max_code_marks || 0;
-      const maxMCQ = subjData.max_mcq_marks || 0;
-      const obtainedCode = subjData.obtained_code_marks || 0;
-      const obtainedMCQ = subjData.obtained_mcq_marks || 0;
-      return {
-        subject: subjectName,
-        scoreText:
-          maxCode + maxMCQ === 0
-            ? "N/A"
-            : `${obtainedCode + obtainedMCQ}/${maxCode + maxMCQ}`,
-      };
-    });
-  };
+ const getSubjectWiseAnalysis = (subjects) => {
+  if (!subjects || Object.keys(subjects).length === 0) return [];
+  return Object.entries(subjects).map(([subjectName, subjData]) => {
+    const maxCode = subjData.max_code_marks || 0;
+    const maxMCQ = subjData.max_mcq_marks || 0;
+    const obtainedCode = subjData.obtained_code_marks || 0;
+    const obtainedMCQ = subjData.obtained_mcq_marks || 0;
+    return {
+      subject: subjectName,
+      scoreText:
+        maxCode + maxMCQ === 0
+          ? "N/A"
+          : `${Math.round(obtainedCode + obtainedMCQ)}/${maxCode + maxMCQ}`,
+    };
+  });
+};
+
 
   const getTotalScore = (subjects) => {
     const analysis = getSubjectWiseAnalysis(subjects);
