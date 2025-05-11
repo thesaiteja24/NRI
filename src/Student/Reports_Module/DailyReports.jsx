@@ -79,7 +79,7 @@ const ExamCard = ({ exam, totalScore, maxScore, attempted }) => {
           </span>
           <div className="text-base font-medium mt-1">
             <span className="text-[#777777]">Score :</span>{" "}
-            <span className="text-[#4A4A4A]">{attempted ? `${totalScore}/${maxScore}` : "00/30"}</span>
+            <span className="text-[#4A4A4A]">{attempted ? `${Math.round(totalScore)}/${maxScore}` : "00/30"}</span>
           </div>
         </div>
       </div>

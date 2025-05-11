@@ -47,7 +47,8 @@ const DoughnutChart = ({
         <Doughnut data={data} options={options} />
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <p className="text-black font-semibold text-lg">Total Score</p>
-          <p className="text-black font-bold text-3xl">{totalScore}</p>
+          <p className="text-black font-bold text-3xl">{Math.round(totalScore)}</p>
+
         </div>
       </div>
 

@@ -188,7 +188,7 @@ const ExamsDetailsManager = ({ data }) => {
           const codeTotal = details.max_code_marks || 0;
           const totalScore = mcqScore + codeScore;
           const totalMax = mcqTotal + codeTotal;
-          return totalMax > 0 ? `${subject}: ${totalScore}/${totalMax}` : null;
+          return totalMax > 0 ? `${subject}: ${Math.round(totalScore)}/${totalMax}` : null;
         })
         .filter(Boolean)
         .join(', ') || 'N/A';
