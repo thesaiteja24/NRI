@@ -849,23 +849,26 @@ const StudentProfileV = () => {
               <label className="text-[#00007F] font-medium text-lg">
                 Department <span className="text-red-500">*</span>
               </label>
-              <div className="relative">
-                <select
-                  name="department"
-                  value={formData.department}
-                  onChange={handleDepartmentChange}
-                  className={`w-full px-4 py-3 text-[#666666] text-base font-medium border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00007F] appearance-none ${errors.department ? 'border-red-500' : 'border-[#00007F]'}`}
-                  required
-                >
-                  <option value="">Select Department</option>
-                  {departments.map((dept, index) => (
-                    <option key={index} value={dept}>
-                      {dept}
-                    </option>
-                  ))}
-                </select>
-                <span className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#999999] text-lg">▼</span>
-              </div>
+             <div className="relative">
+              <select
+                name="department"
+                value={formData.department}
+                onChange={handleDepartmentChange}
+                className={`w-full px-4 py-3 text-[#666666] text-base font-medium border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00007F] appearance-none ${errors.department ? 'border-red-500' : 'border-[#00007F]'}`}
+                required
+              >
+                <option value="">Select Department</option>
+                {departments.map((dept, index) => (
+                  <option key={index} value={dept}>
+                    {dept}
+                  </option>
+                ))}
+              </select>
+              <span className="pointer-events-none absolute right-4 top-1/2 transform -translate-y-1/2 text-[#999999] text-l">
+                ▼
+              </span>
+            </div>
+
               {isOther && !isDepartmentAdded && (
                 <div className="mt-2 flex gap-2">
                   <input
@@ -998,8 +1001,11 @@ const StudentProfileV = () => {
                   ))}
                   <option value="Other">Other</option>
                 </select>
-                <span className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#999999] text-lg">▼</span>
+                <span className="pointer-events-none absolute right-3 top-1/2 transform -translate-y-1/2 text-[#999999] text-lg">
+                  ▼
+                </span>
               </div>
+
               {isOther && (
                 <div className="mt-2">
                   <input
