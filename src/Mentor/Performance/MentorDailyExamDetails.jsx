@@ -51,7 +51,7 @@ const MentorDailyExamDetails = () => {
       const obtainedMCQ = subjData.obtained_mcq_marks || 0;
       return {
         subject: subjectName,
-        scoreObtained: obtainedCode + obtainedMCQ,
+        scoreObtained: Math.round(obtainedCode + obtainedMCQ),
         totalPossible: maxCode + maxMCQ,
       };
     });
