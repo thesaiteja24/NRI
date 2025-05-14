@@ -39,8 +39,8 @@ const ExamContent = () => {
         state: { analysis: response?.data, examId: examData?.exam?.examId },
       });
     } catch (error) {
-      toast.error("Exam submission failed! Returning to dashboard.");
-      setSubmissionComplete(false);
+      
+      setSubmissionComplete(true);
       if (document.fullscreenElement) {
         document.exitFullscreen().catch((err) => {
           console.error("Error exiting fullscreen:", err);

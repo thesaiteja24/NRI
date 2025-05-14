@@ -228,9 +228,9 @@ export const ExamProvider = ({ children }) => {
         return response;
       }
     } catch (error) {
-      toast.error("Error during exam submission: " + error.message);
-      console.error("Error during exam submission:", error);
-      setSubmissionComplete(false);
+      toast.error(error.response.data.message);
+      console.error("Error during exam submission:", error.response.data.message);
+      setSubmissionComplete(true);
       throw error;
     } finally {
       setIsSubmitting(false);
