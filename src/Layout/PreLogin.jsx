@@ -10,7 +10,7 @@ const PreLogin = ({ onToggleSidebar, userProfile, onLogout }) => {
   const hideLoginButton =
     location.pathname === "/login" || location.pathname.startsWith("/admin");
   return (
-    <div className="fixed w-full h-16 bg-white flex items-center justify-between px-4 z-50">
+    <div className="fixed w-full h-16 bg-white flex items-center justify-between px-4 z-50 pl-5 pr-5">
       {/* Logo Section */}
       <div
         className="flex items-center space-x-4 cursor-pointer"
@@ -18,9 +18,9 @@ const PreLogin = ({ onToggleSidebar, userProfile, onLogout }) => {
       >
         <div className="flex items-center">
           <img
-            src="https://res.cloudinary.com/db2bpf0xw/image/upload/v1734849439/codegnan-logo_qxnxrq.webp"
+            src="/images/codegnan-destination.webp"
             alt="Codegnan Logo"
-            className="h-14 sm:h-20 w-auto object-contain align-middle"
+            className="h-14 sm:h-10 w-auto object-contain align-middle"
           />
           <img
             src={NRIA}

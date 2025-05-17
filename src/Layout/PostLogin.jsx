@@ -27,9 +27,9 @@ const PostLogin = ({
         )}
         <div className="flex items-center ">
           <img
-            src="https://res.cloudinary.com/db2bpf0xw/image/upload/v1734849439/codegnan-logo_qxnxrq.webp"
+            src="/images/codegnan-destination.webp"
             alt="Codegnan Logo"
-            className="cursor-pointer h-12 sm:h-20  md:ml-10 w-24 md:w-36 " // slightly bigger
+            className="cursor-pointer h-12 sm:h-10  md:ml-10 w-24 md:w-36 " // slightly bigger
             onClick={() => navigate("/")}
           />
          <div className="flex justify-center items-center">
