@@ -1,5 +1,5 @@
 import React from "react";
-import NRIA from "/NRIA.png";
+import NRIA from "/NRIA.webp";
 
 const KitsCollaboration = () => {
   return (

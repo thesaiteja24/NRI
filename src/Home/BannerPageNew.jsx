@@ -3,7 +3,7 @@ import StatsChart from './StatsChart'
 
 const BannerPageNew = () => {
     return (
-        <div className="mt-24 pl-32 pr-16 bg-[url('/bannerbg.png')] dont-[Afacad]">
+        <div className="mt-24 pl-32 pr-16 bg-[url('/banner-bg.webp')] dont-[Afacad]">
             <div className='grid grid-cols-[75%_25%]'>
                 <div>
                     <div className='flex flex-row gap-8'>

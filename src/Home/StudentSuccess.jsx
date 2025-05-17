@@ -26,7 +26,7 @@ const SuccessStories = () => {
 
   const { companiesList = {}, collegesList = {} } = dashboardData || {};
 
-  // Filter functions from old code
+  // Filter functions
   const filterCompanies = (query) =>
     Object.entries(companiesList).filter(([company]) =>
       company.toLowerCase().includes(query.toLowerCase())
@@ -55,7 +55,7 @@ const SuccessStories = () => {
     filterColleges(collegeSearchQuery).length / collegesPerPage
   );
 
-  // Pagination renderer from old code, adapted for Tailwind styling
+  // Pagination renderer
   const renderPagination = (currentPage, totalPages, setPage) => {
     const visiblePages = [];
 
@@ -68,7 +68,7 @@ const SuccessStories = () => {
     }
 
     return (
-      <div className="flex justify-end px-4 mt-4 font-['Inter'] text-sm md:text-base mb-10">
+      <div className="flex justify-end px-4 mt-4 font-['Inter'] text-sm md:text-base mb-10 max-w-full">
         <button
           className={`flex items-center gap-1 px-2 py-1 ${
             currentPage === 1
@@ -145,7 +145,7 @@ const SuccessStories = () => {
   };
 
   return (
-    <div className=" mx-auto px-10 py-8 font-[Afacad] relative bg-[#f3f4f6]">
+    <div className="mx-auto px-10 py-8 font-[Afacad] relative bg-white">
       <h2 className="text-2xl md:text-3xl lg:text-[43px] font-semibold text-[#020031] mb-10 text-center">
         Our Students Success Stories
       </h2>
@@ -155,7 +155,7 @@ const SuccessStories = () => {
         {/* Companies Section */}
         <div className="flex flex-col h-full">
           {/* Search Input */}
-          <div className="mb-4">
+          <div className="mb-4 mx-auto max-w-3xl w-full">
             <input
               type="text"
               placeholder="Search Company Name..."
@@ -166,7 +166,7 @@ const SuccessStories = () => {
           </div>
 
           {/* Table */}
-          <div className="overflow-x-auto w-[100%] mx-auto border rounded-xl">
+          <div className="overflow-x-auto mx-auto max-w-3xl border rounded-xl">
             <table className="w-full border-collapse table-fixed shadow-[0px_4px_4px_0px_#00000040] min-h-[400px]">
               <thead>
                 <tr className="bg-[#00007F] text-white">
@@ -206,7 +206,7 @@ const SuccessStories = () => {
         {/* Colleges Section */}
         <div className="hidden lg:grid place-items-center">
           <img
-            src="https://res.cloudinary.com/db2bpf0xw/image/upload/v1745658096/succes_jf6uoa.png"
+            src="/images/kits_success.webp"
             alt="Students celebrating success"
             className="rounded-[20px] object-contain w-[100%] max-h-full"
           />
